@@ -1,0 +1,239 @@
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent
+}
+html, body{
+	height: 100%;
+	position: relative;
+	margin: 0;
+	overflow: hidden;
+	-webkit-user-select:none;
+	-webkit-tap-highlight-color: transparent;
+}
+body{
+	background-color: #000018;
+	font-family: '微软雅黑';
+}
+a{
+	text-decoration: none;
+}
+#container{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+#startgame{
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}
+#gamepanel{
+	width: 375px;
+	margin: 0 auto;
+	height: 667px;
+	position: relative;
+	overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+	#gamepanel, body, html{
+		width: 375px;
+		margin: 0 auto;
+	}
+}
+#stage{
+	background-color: #000;
+}
+
+.score-wrap {
+	background: url(../img/scorebg.png) no-repeat;
+	background-size: 100%;
+	color: #ef0d00;
+	/*display: none;*/
+	font-family: "Helvetica","Microsoft YaHei",sans-serif;
+	font-style: italic;
+	font-size: 18px;
+	font-weight: 700;
+	height: 32px;
+	letter-spacing: 2px;
+	padding: 7px 10px;
+	position: absolute;
+	left: 20px;
+	text-align: left;
+	text-shadow: 1.5px 0 0 #613209,-1.5px 0 0 #613209,0 1px 0 #613209,0 -1.5px 0 #613209,1px 1px 0 #613209,-1px 1px 0 #613209,1px -1px 0 #613209,-1px -1px 0 #613209;
+	top: 10px;
+	width: 105px;
+	z-index: 1005
+}
+
+
+div.hearthot {
+	-webkit-animation: fire .2s linear;
+	-o-animation: fire .2s linear;
+	animation: fire .2s linear
+}
+
+@-webkit-keyframes fire {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale(1.1);
+		-moz-transform: scale(1.1);
+		-ms-transform: scale(1.1);
+		-o-transform: scale(1.1);
+		transform: scale(1.1)
+	}
+
+	100% {
+		opacity: 0;
+		-webkit-transform: scale(3.0);
+		-moz-transform: scale(3.0);
+		-ms-transform: scale(3.0);
+		-o-transform: scale(3.0);
+		transform: scale(3.0)
+	}
+}
+
+@keyframes fire {
+	0% {
+		-webkit-transform: scale(1.1);
+		-moz-transform: scale(1.1);
+		-ms-transform: scale(1.1);
+		-o-transform: scale(1.1);
+		transform: scale(1.1)
+	}
+
+	100% {
+		-webkit-transform: scale(1.0);
+		-moz-transform: scale(1.0);
+		-ms-transform: scale(1.0);
+		-o-transform: scale(1.0);
+		transform: scale(1.0)
+	}
+}
+.music {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 25px;
+    height: 25px;
+    background-image: url('../img/pagemusic1.png');
+    background-size: 25px;
+    z-index: 99;
+}
+.music.play {
+    background-image: url('../img/pagemusic.png');
+    -webkit-animation: rotate 3.45s linear infinite;
+    animation: rotate 3.45s linear infinite;
+}
+@keyframes rotate {
+  0% {transform:rotate(0deg)}
+  100% {transform:rotate(360deg)}
+}
+@-webkit-keyframes rotate {
+  0% {-webkit-transform:rotate(0deg)}
+  100% {-webkit-transform:rotate(360deg)}
+}
+#guidePanel {
+	background: rgba(0,0,0,0.8) url(../img/startbg.png) center 50% no-repeat;
+	background-size: 274px 359px;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 10000
+}
+#gameoverPanel {
+	background: rgba(0,0,0,0.8) url(../img/gameover.png) center 40% no-repeat;
+	background-size: 200px 187px;
+	top: 0
+}
+
+#gameoverPanel,#resultPanel {
+	display: none;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: 10000
+}
+
+#resultPanel{
+	background:url(../img/endpage.png) center top no-repeat;
+	background-size:100% 100%;
+	overflow:hidden;
+}
+
+#resultPanel,#resultPanel .weixin-share {
+	left: 0;
+	top: 0
+}
+#resultPanel .weixin-share {
+	background: rgba(0,0,0,.8) url(../img/weixin.png) center 20px no-repeat;
+	background-size: 306px 306px;
+	display: none;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: 100
+}
+
+#resultPanel .replay {
+}
+#resultPanel .panel,#scoreBoard .score-result {
+	display: none;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%
+}
+#fenghao{
+	height: 71px;
+    width: 142px;
+    margin: 260px auto 25px;
+}
+#scorecontent{
+	font-size: 16px;
+	font-weight: 700;
+	color: #000;
+	text-align: center;
+}
+.lighttext{
+	color: #df0000;
+}
+.geili{
+	background: url(../img/geili.png) center no-repeat;
+	background-size:100% 100%;
+}
+.yinhen{
+	background: url(../img/yinhen.png) center no-repeat;
+	background-size:100% 100%;
+}
+.textc{
+	text-align: center;
+}
+.btn1, .btn2{
+	display: inline-block;
+	width: 196px;
+	height: 54px;
+	line-height: 54px;
+	color: #FFF;
+	font-size: 20px;
+	border-radius: 20px;
+	text-align: center;
+}
+.btn1, .btn2{
+	margin-top: 15px;
+	background-color: #02a299;
+}
+.bottom-icon{
+	width:95.6%;
+	height:auto;
+	position:absolute;
+	left:2.2%;
+	bottom:0;
+}
+.displayno{
+	display:none;
+}
